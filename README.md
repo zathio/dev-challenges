@@ -4,12 +4,16 @@ Dev Challenges provide challenges in **frontend web development**.
 
 For more informations check [Dev Challenges website](https://devchallenges.io/)
 
-## My submissions
+# My Submissions
 
-You can find below the live versions of my solutions :
+You can find below my solutions :
 
-### Responsive Web Developer Path :
+## Responsive Web Developer Path :
 
-- [**404 Not Found**](https://github.com/zathio/dev-challenges/tree/master/404-not-found) : Responsive 404 Not found Page.
+Basics responsive **HTML/CSS/JS** websites and pages.
+
+- [**404 Not Found**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/404-not-found) : Responsive 404 Not found Page.
 
 ### Front-end Developer Path :
+
+More complex websites and apps using the Front-end librairie **React.js**

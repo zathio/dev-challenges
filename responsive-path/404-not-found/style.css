@@ -1,0 +1,170 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* COLORS */
+
+:root {
+    --dark: #333;
+    --dark-gray: #4F4F4F;
+    --white: #fff;
+}
+
+.logo, .title, .dev-challenges-profile {
+    color: var(--dark)
+}
+
+/* BODY */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.85rem 5.5rem;
+    background: var(--white);
+}
+
+/* HEADER */
+
+.header {
+    align-self: flex-start;
+}
+
+.header .logo {
+    font-family: Inconsolata;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+}
+
+/* CONTAINER */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE */
+
+.illustration img{
+    width: 539px;
+    height: auto;
+}
+
+/* MAIN */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Space Mono";
+    width: 586px;
+    margin-left: 8.78rem;
+}
+
+.title {
+    font-size: 64px;
+    line-height: 95px;
+    letter-spacing: -0.035em;
+}
+
+.infos {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.035em;
+    max-width: 381px;
+    padding: 2.57rem 0 4.57rem 0;
+    color: var(--dark-gray);
+}
+
+.button-homepage {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -0.035em;
+    width: max-content;
+    padding: 1.6em 3em;
+    color: var(--white);
+    background-color: var(--dark);
+    transition: background-color .1s;
+}
+
+.button-homepage:hover {
+    background-color: var(--dark-gray);
+}
+
+/* FOOTER */
+
+.dev-challenges-profile {
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.dev-challenges-profile:hover {
+    text-decoration: underline;
+}
+
+/* SMALLER DESKTOP */
+
+@media screen and (max-width: 1280px) {
+    .container {
+        transform: scale(.7);
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 1.42rem 1.71rem;
+    }
+
+    .container {
+        transform: scale(1);
+        flex-direction: column;
+    }
+
+    .illustration {
+        margin: 4.57rem 0 4.2rem 0;
+    }
+    
+    .illustration img {
+        width: 286px;
+    }
+
+    .container {
+        margin-bottom: 6.85rem;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 44px;
+        line-height: 71px;
+    }
+
+    .infos {
+        font-size: 18px;
+        line-height: 27px;
+        padding: 2rem 0 4.78rem 0;
+    }
+}
