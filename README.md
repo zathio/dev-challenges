@@ -1,6 +1,6 @@
 # Dev Challenges
 
-Dev Challenges provide challenges in **frontend web development**.
+Dev Challenges provide challenges in **frontend web development**.   
 For more informations check [Dev Challenges website](https://devchallenges.io/)
 
 You can find below my solutions :
