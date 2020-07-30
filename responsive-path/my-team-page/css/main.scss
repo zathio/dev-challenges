@@ -1,0 +1,163 @@
+@import 'reset', 'colors';
+
+@mixin desktop {
+    @media screen and (min-width: 640px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 640px){
+        @content;
+    }
+}
+
+@mixin flex {
+    display: flex;
+}
+
+/* BODY */
+
+body {
+    min-height: 100vh;
+    background: color(bg);
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem;
+    position: relative;
+
+    @include flex;
+
+    @include desktop {
+        padding: 7.75rem 1.3rem 2.1rem 1.3rem;
+    }
+}
+
+/* PRESENTATION */
+
+.presentation-box {
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 4.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include flex;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    .title {
+        width: 100%;
+        font-family: "PT Serif", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        margin-bottom: 2.5rem;
+    }
+
+    .subtitle-box {
+        width: 100%;
+
+        .subtitle {
+            font-size: 1.29rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: .7rem;
+        }
+
+        .team-presentation {
+            font-size: 1rem;
+            font-weight: 400;
+            width: 85%;
+            
+            @include desktop {
+                font-size: 1.29rem;
+            }
+        }
+    }
+}
+
+/* MEMBERS */
+
+.flex-container {
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include flex;
+
+    .member {
+        position: relative;
+        max-width: 240px;
+        width: 42%;
+        margin: 0 1rem .7rem 0;
+
+        @include mobile {
+            &:nth-child(even) {
+                margin-top: 3.4rem;
+            }
+        }
+
+        @include desktop {
+            &:nth-child(3n+2) {
+                margin-top: 4rem;
+            }
+        }
+
+        .member-job {
+            font-family: "PT Serif";
+            text-transform: uppercase;
+            font-size: .7rem;
+            font-weight: 400;
+            white-space: nowrap;
+            position: absolute;
+            margin-left: 1.2rem;
+            transform-origin: 0 0;
+            transform: rotate(90deg);
+
+            @include desktop {
+                font-size: .85rem;
+                margin-left: 1.5rem;
+            }
+        }
+
+        .member-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: .2rem;
+
+            @include desktop {
+                font-size: 1.29rem;
+            }
+        }
+
+        .member-portrait {
+            width: 100%;
+        }
+    }
+}
+
+/* FOOTER */
+
+.end-footer {
+    flex-grow: 1;
+}
+
+.footer {
+    justify-self: end;
+    margin-top: 6.2rem;
+
+    .dev-challenges-profile {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: color(footer);
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

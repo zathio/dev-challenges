@@ -1,0 +1,8 @@
+$colors: (
+    bg: #FAFAFA,
+    footer: #A9A9A9
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}

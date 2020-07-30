@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  background: #FAFAFA;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.3rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    padding: 7.75rem 1.3rem 2.1rem 1.3rem;
+  }
+}
+
+/* PRESENTATION */
+.presentation-box {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 4.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 640px) {
+  .presentation-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.presentation-box .title {
+  width: 100%;
+  font-family: "PT Serif", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  margin-bottom: 2.5rem;
+}
+
+.presentation-box .subtitle-box {
+  width: 100%;
+}
+
+.presentation-box .subtitle-box .subtitle {
+  font-size: 1.29rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: .7rem;
+}
+
+.presentation-box .subtitle-box .team-presentation {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+}
+
+@media screen and (min-width: 640px) {
+  .presentation-box .subtitle-box .team-presentation {
+    font-size: 1.29rem;
+  }
+}
+
+/* MEMBERS */
+.flex-container {
+  max-width: 900px;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-container .member {
+  position: relative;
+  max-width: 240px;
+  width: 42%;
+  margin: 0 1rem .7rem 0;
+}
+
+@media screen and (max-width: 640px) {
+  .flex-container .member:nth-child(even) {
+    margin-top: 3.4rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .flex-container .member:nth-child(3n+2) {
+    margin-top: 4rem;
+  }
+}
+
+.flex-container .member .member-job {
+  font-family: "PT Serif";
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 400;
+  white-space: nowrap;
+  position: absolute;
+  margin-left: 1.2rem;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media screen and (min-width: 640px) {
+  .flex-container .member .member-job {
+    font-size: .85rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.flex-container .member .member-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: .2rem;
+}
+
+@media screen and (min-width: 640px) {
+  .flex-container .member .member-name {
+    font-size: 1.29rem;
+  }
+}
+
+.flex-container .member .member-portrait {
+  width: 100%;
+}
+
+/* FOOTER */
+.end-footer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.footer {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-top: 6.2rem;
+}
+
+.footer .dev-challenges-profile {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #A9A9A9;
+}
+
+.footer .dev-challenges-profile:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
