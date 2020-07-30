@@ -45,7 +45,7 @@ body {
 }
 
 .header .logo {
-    font-family: Inconsolata;
+    font-family: "Inconsolata", sans-serif;
     font-weight: bold;
     font-size: 24px;
     letter-spacing: -0.08em;
@@ -73,7 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Space Mono";
+    font-family: "Space Mono", sans-serif;
     width: 586px;
     margin-left: 8.78rem;
 }
@@ -112,7 +112,7 @@ body {
 /* FOOTER */
 
 .dev-challenges-profile {
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
