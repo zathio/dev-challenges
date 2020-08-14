@@ -1,6 +1,6 @@
 # Dev Challenges
 
-![](logo.svg)
+![](logo-dev-challenges.png)
 
 Dev Challenges provide challenges in **frontend web development**   
 For more informations check [Dev Challenges website](https://devchallenges.io/)
