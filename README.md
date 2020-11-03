@@ -2,8 +2,8 @@
 
 ![](logo-dev-challenges.png)
 
-Dev Challenges provide challenges in **frontend web development**   
-For more informations check [Dev Challenges website](https://devchallenges.io/)
+Dev Challenges provide challenges in **web development**   
+See my [Dev Challenges portfolio](https://portfolio.devchallenges.io/zathio) and for more informations check [Dev Challenges website](https://devchallenges.io/)
 
 You can find below my solutions :
 
