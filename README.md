@@ -11,9 +11,9 @@ You can find below my solutions :
 
 Basics responsive **HTML/CSS** websites and pages
 
-- [**404 Not Found**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/404-not-found) : 404 Not found Page
+- Challenge 1 : [**404 Not Found**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/404-not-found)
 
-- [**My Team Page**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/my-team-page) : Meet The Team Page
+- Challenge 2 : [**My Team Page**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/my-team-page)
 
 ## Front-end Developer Path :
 
