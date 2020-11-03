@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://https://zathio.github.io/dev-challenges/responsive-path/404-not-found/">
+    <a href="https://zathio.github.io/dev-challenges/responsive-path/404-not-found/">
       Demo
     </a>
     <span> | </span>
@@ -35,8 +35,8 @@
 
 ![screenshot](preview.png)
 
-- View the [live demo](https://https://zathio.github.io/dev-challenges/responsive-path/404-not-found/)
-- First DevChallenge project
+- View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/404-not-found/)
+- First Dev Challenges project
 
 ### Built With
 
