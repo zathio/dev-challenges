@@ -36,7 +36,7 @@
 ![screenshot](preview.png)
 
 - View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/404-not-found/)
-- First Dev Challenges project
+- 1st Dev Challenges project
 
 ### Built With
 

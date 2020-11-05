@@ -36,7 +36,7 @@
 ![screenshot](preview.png)
 
 - View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/my-team-page/)
-- Second Dev Challenges project
+- 2nd Dev Challenges project
 
 ### Built With
 
