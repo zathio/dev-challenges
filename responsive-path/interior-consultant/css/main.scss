@@ -1,0 +1,278 @@
+@import "reset", "layout";
+
+/* | BODY */
+
+body {
+    color: $primary;
+    background-color: $bg;
+    --padding-h: .75rem;
+    padding: 0 var(--padding-h);
+    @include desktop {
+        --padding-h: 4.8125rem;
+        align-items: center;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: calc(1440px - var(--padding-h) * 2);
+    margin: 1.5rem 0;
+    @include desktop {
+        margin: 2.625rem 0;
+    }
+}
+
+/* | HEADER */
+
+.header {
+    .logo {
+        float: left;
+        text-transform: uppercase;
+        font-size: .875rem;
+        font-family: "Crimson Pro", sans-serif;
+        padding: 0.5rem;
+        border: 1px solid $primary;
+        cursor: pointer;
+    }
+
+    .menu-button {
+        font-size: 2.4rem;
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .nav {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $bg;
+        box-shadow: -30px 0 30px rgba(0,0,0,0);
+        transition: right .3s, box-shadow .15s;
+        @include desktop {
+            position: relative;
+            right: 0;
+            width: fit-content;
+            box-shadow: none !important;
+            transition: none;
+        }
+        
+        &.show {
+            right: 0;
+            box-shadow: -30px 0 30px rgba(0,0,0,.3);
+        }
+
+        .menu-button {
+            position: absolute;
+            top: 1.5rem;
+            right: var(--padding-h);
+        }
+
+        .nav-list {
+            text-align: center;
+            position: relative;
+            line-height: 4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            @include desktop {
+                top: 0;
+                transform: none;
+                display: flex;
+                line-height: unset;
+
+                li:not(:last-child) {
+                    margin-right: 5.375rem;
+                }
+            }
+            
+            .list-item {
+                font-size: 1.125rem;
+
+                &.active {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+/* | MAIN */
+
+.main {
+    height: 100%;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -.3rem;
+    }
+
+    /* PRESENTATION */
+
+    .presentation-box {
+        .title {
+            font-family: "Lora", sans-serif;
+            font-weight: 400;
+            font-size: 2.25rem;
+            @include desktop {
+                font-size: 3rem;
+            }
+        }
+
+        .desc {
+            margin: 1.5625rem 0;
+            font-weight: 300;
+            font-size: .875rem;
+            max-width: 250px;
+            @include desktop {
+                font-size: 1.5rem;
+                max-width: 410px;
+                margin: 2.8125rem 0;
+            }
+        }
+
+        .more-btn {
+            font-weight: 600;
+            font-size: .875rem;
+            @include desktop {
+                font-size: 1.125rem;
+            }
+
+            .icon {
+                vertical-align: middle;
+                margin: 0 0 1px 15px;
+                font-size: 1.5rem;
+                transition: margin-left .15s;
+            }
+    
+            &:hover .icon {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    /* PHOTO */
+
+    .photo-box {
+        margin: 1.8rem 0 6.5rem 0;
+        width: 100%;
+        position: relative;
+        @include desktop {
+            margin: 0 0 0 2rem;
+            max-width: 737px;
+        }
+
+        .img-photo-box {
+            width: 100%;
+            min-height: 240px;
+            background-color: $secondary;
+            
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .author-box {
+            position: absolute;
+            bottom: -5.5rem;
+            right: .6rem;
+            z-index: 1;
+            padding: 0.8125rem 1.25rem 1.5625rem 1.25rem;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background-color: $bg;
+            width: 300px;
+            @include desktop {
+                width: 410px;
+                padding: 1.125rem 1.9375rem 2.125rem 1.9375rem;
+            }
+
+            .profile-overview {
+                .img-box {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    margin-right: .9rem;
+                    background-color: $secondary;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    @include desktop {
+                        margin-right: 1.05rem;
+                        width: 3.125rem;
+                        height: 3.125rem;
+                    }
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        font-size: .4rem;
+                        text-align: center;
+                    }
+                }
+
+                .author-infos {
+                    @include desktop {
+                        justify-content: space-evenly;
+                    }
+
+                    .author-name {
+                        margin-top: 3px;
+                        font-size: .75rem;
+                        @include desktop {
+                            font-size: .875rem;
+                            margin-top: 0;
+                        }
+                    }
+    
+                    .author-job {
+                        font-size: .625rem;
+                        color: $secondary;
+                        @include desktop {
+                            font-size: .75rem;
+                        }
+                    }
+                }
+            }
+
+            .author-title {
+                margin-top: 1.15rem;
+                max-width: 210px;
+                font-family: "Lora", sans-serif;
+                font-size: 1.125rem;
+                font-weight: 700;
+                @include desktop {
+                    margin-top: 1.5625rem;
+                }
+            }
+        }
+    }
+}
+
+/* | FOOTER */
+
+.footer {
+    text-align: center;
+
+    .dev-challenges-profile {
+        font-weight: 600;
+        color: $secondary;
+        font-size: .875rem;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: -.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 65vw;
+            background-color: $secondary;
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+}

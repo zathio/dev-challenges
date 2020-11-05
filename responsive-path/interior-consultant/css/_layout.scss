@@ -1,0 +1,41 @@
+/* COLORS */
+
+$primary: #fff;
+$secondary: #828282;
+$bg: #181719;
+
+/* RESPONSIVE */
+
+@mixin desktop {
+    @media screen and (min-width: 950px) {
+        @content;
+    }
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+/* TEXT */
+
+.link:hover {
+    text-decoration: underline;
+}
