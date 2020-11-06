@@ -17,6 +17,8 @@ Basics responsive **HTML/CSS** websites and pages
 
 - Challenge 3 : [**"Interior Consultant"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/interior-consultant)
 
+- Challenge 4 : [**"My Gallery"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/my-gallery)
+
 ## Front-end Developer Path :
 
 More complex websites and apps using the Front-end librairie **React.js**

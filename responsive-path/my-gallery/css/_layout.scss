@@ -1,0 +1,32 @@
+/* COLORS */
+
+$primary-text: #4E5150;
+$secondary-text: #A9A9A9;
+$bg: #fff;
+$stat-box: #E5E5E5;
+
+/* MIXINS */
+
+@mixin desktop {
+    @media screen and (min-width: 850px) {
+        @content;
+    }
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
