@@ -1,0 +1,438 @@
+@import "reset", "layout", "animations";
+
+/* VARIABLES */
+
+$border-radius: 12px;
+
+/* BODY */
+
+body {
+    min-height: 100vh;
+    background-color: $bg;
+    padding: 2rem .75rem 1.25rem .75rem;
+    color: $gray-1;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 4rem 1.25rem 4rem;
+    }
+}
+
+.wrapper {
+    max-width: 960px;
+    width: 100%;
+}
+
+.page-title {
+    color: $gray-2;
+    font-size: 1.5rem;
+    margin: 0 0 1.3125rem .37rem;
+    @include desktop {
+        margin: 0 0 3.125rem 0;
+        font-size: 2.25rem;
+    }
+}
+
+/* | MAIN */
+
+.main {
+    @include desktop {
+        display: flex;
+        align-items: start;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 2.5rem;
+    }
+
+    /* Order Preview */
+    
+    .order-preview {
+        background-color: $box-bg;
+        padding: 1.875rem 1.625rem .6rem 1.625rem;
+        border-radius: $border-radius;
+        width: 100%;
+        margin-bottom: 2.4375rem;
+        @include desktop {
+            max-width: 23.9375rem;
+            font-size: 1.3125rem;
+            padding: 2rem 1.875rem .8rem 1.875rem;
+            margin-bottom: 0;
+        }
+        
+        .order-item {
+            margin-bottom: 1.625em;
+            grid-template-columns: auto 1fr;
+            gap: 1.25em;
+
+            &:nth-child(2) {
+                margin-bottom: 5.375rem;
+                @include desktop {
+                    margin-bottom: 5.9375rem;
+                }
+            }
+            
+            .item-image {
+                width: 7.6875em;
+                max-width: 135px;
+                height: 7.6875em;
+                max-height: 135px;
+                overflow: hidden;
+                border-radius: $border-radius;
+            }
+
+            .item-infos {
+                color: $gray-2;
+
+                .item-name {
+                    font-size: .75em;
+                    margin-bottom: .67em;
+                    @include desktop {
+                        font-size: 1rem;
+                        margin-bottom: .2rem;
+                    }
+                }
+
+                .item-price {
+                    font-size: .875em;
+                    color: $primary;
+                    margin-right: .315em;
+                    @include desktop {
+                        font-size: 1rem;
+                    }
+                }
+
+                .item-old-price {
+                    font-size: .625em;
+                    @include desktop {
+                        font-size: .75rem;
+                    }
+                }
+            }
+
+            .item-quantity-box {
+                height: 3.125em;
+                max-height: 52px;
+                width: 7.625em;
+                max-width: 134px;
+                border: 1px solid $gray-3;
+                border-radius: $border-radius;
+                padding: 0 .635em;
+
+                .item-quantity {
+                    font-size: 1rem;
+                }
+
+                .icon-btn {
+                    transition: background-color .1s, color .1s;
+
+                    &:hover {
+                        color: $bg;
+                        background-color: $primary;
+                    }
+
+                    &:active {
+                        color: $bg;
+                        background-color: darken($primary, 15%);
+                    }
+                }
+            }
+        }
+
+        .order-infos .order-info {
+            font-size: .875rem;
+            border-top: 1px solid $gray-5;
+            padding: 0.93em 0;
+
+            .order-info-name {
+                @include desktop {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+
+    /* Form */
+
+    .form {
+        margin-bottom: 6.25em;
+        @include desktop {
+            width: 100%;
+            max-width: 29.0625rem;
+            margin-bottom: 10.375rem;
+            font-size: 1.25rem;
+        }
+
+        .form-section:first-child {
+            margin-bottom: 2.8125em;
+        }
+
+        .form-section-title {
+            font-size: .875em;
+            margin-bottom: .79em;
+        }
+
+        .form-section.grid {
+            gap: 0 1.455em;
+        }
+        
+        .input-container {
+            margin-bottom: 1.0313em;
+
+            &.invalid {
+                animation: shake .3s;
+            }
+
+            .label {
+                display: block;
+                font-size: .625em;
+                color: $gray-2;
+                margin-bottom: .5em;
+            }
+
+            .input-box {
+                position: relative;
+
+                .input {
+                    text-overflow: ellipsis;
+                    padding: 1.065em 1em 1.065em 3em;
+                    border: 1px solid $gray-3;
+                    border-radius: $border-radius;
+                    width: 100%;
+                    font-size: .75em;
+                    color: $gray-1;
+
+                    @include desktop {
+                        &:hover {
+                            background-color: darken($bg, 3%);
+                        }
+                    }
+
+                    &:focus {
+                        border-color: $primary;
+                        background-color: rgba($primary, .05);
+
+                        & ~ .icon:not(.icon-select):not(.custom-checkbox) {
+                            color: $primary;
+                        }
+
+                        & ~ .icon-select::after {
+                            content: "keyboard_arrow_up";
+                        }
+                    }
+
+                    &.verify {
+                        padding-right: 3em;
+
+                        & ~ .icon-validation{
+                            visibility: visible;
+                            opacity: .8;
+
+                            &::before {
+                                content: attr(data-error-msg);
+                                font-family: "Montserrat", sans-serif;
+                                font-size: .65rem;
+                                position: absolute;
+                                right: -.6em;
+                                bottom: -3em;
+                                padding: .5rem;
+                                border-radius: 6px;
+                                color: $bg;
+                                background-color: $gray-1;
+                                box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: opacity .15s, visibility .15s 0s;
+                                @include desktop {
+                                    right: unset;
+                                    left: 50%;
+                                    bottom: -2.65em;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            
+                            &:hover, &:active {
+                                opacity: 1;
+    
+                                &::before {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    transition: opacity .15s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.valid ~ .icon-validation {
+                        cursor: initial;
+                        opacity: 1;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            content: "check_circle";
+                            color: $valid;
+                        }
+                    }
+                }
+
+                .icon {
+                    position: absolute;
+                    left: .67em;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 1.1em;
+
+                    &.icon-validation {
+                        visibility: hidden;
+                        left: unset;
+                        right: .67em;
+                        opacity: 0;
+                        transition: opacity .15s;
+                        cursor: help;
+
+                        &::after {
+                            content: "error";
+                            color: $invalid;
+                            transition: color .1s;
+                        }
+                    }
+                }
+
+                .input, .icon {
+                    transition: color .1s, border-color .1s, background-color .1s;
+                }
+
+                .input::placeholder, .icon {
+                    color: $gray-3;
+                    opacity: 1;
+                }
+
+                &.select-country {
+                    .input {
+                        padding-right: 3.08em;
+                        display: block;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        color: $gray-3;
+                        padding-left: 0;
+                        text-indent: 3.17em;
+                        @-moz-document url-prefix() {
+                            text-indent: 1rem;
+                        }
+    
+                        &:valid {
+                            color: $gray-1;
+                        }
+
+                        option {
+                            background-color: $bg;
+                            color: $gray-1;
+                        }
+
+                        &.verify {
+                            padding-right: 4.5em;
+                        }
+                    }
+
+                    .icon-select {
+                        width: 1.07em;
+                        height: 1.07em;
+                        line-height: 1.12em;
+                        font-size: .9em;
+                        left: unset;
+                        right: .86em;
+                        pointer-events: none;
+
+                        &::after {
+                            content: "keyboard_arrow_down";
+                        }
+                    }
+
+                    .icon-validation{
+                        right: 2em;
+
+                        &::before {
+                            margin-right: -2.1em;
+                        }
+                    }
+                }
+
+                &.checkbox {
+                    padding: .35em 0 .35em 2.4em;
+                    position: relative;
+                    cursor: pointer;
+                    transition: background-color .1s;
+
+                    @include desktop {
+                        &:hover {
+                            background-color: darken($bg, 3%);
+                        }
+                    }
+
+                    .input {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        opacity: 0;
+
+                        &:checked ~ .custom-checkbox::after {
+                            content: "check_box";
+                            color: $primary;
+                        }
+                    }
+
+                    .custom-checkbox {
+                        font-size: 1.8em;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        &::after {
+                            content: "check_box_outline_blank";
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            cursor: pointer;
+            background-color: $primary;
+            border-radius: $border-radius;
+            color: $bg;
+            font-size: 1rem;
+            padding: 1.0625rem 2.8125rem;
+            margin-left: auto;
+            transition: background-color .1s;
+            @include desktop {
+                &:hover {
+                    background-color: darken($primary, 8%);
+                }
+            }
+            &:active {
+                background-color: darken($primary, 15%);
+            }
+        }
+    }
+}
+
+/* | FOOTER */
+
+.footer {
+    text-align: center;
+
+    .dev-challenges-profile {
+        color: $gray-4;
+        font-size: .875em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

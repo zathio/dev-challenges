@@ -19,6 +19,8 @@ Basics responsive **HTML/CSS** websites and pages
 
 - Challenge 4 : [**"My Gallery"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/my-gallery)
 
+- Challenge 5 : [**"Checkout Page"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/checkout-page)
+
 ## Front-end Developer Path :
 
 More complex websites and apps using the Front-end librairie **React.js**

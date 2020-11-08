@@ -1,0 +1,84 @@
+/* COLORS */
+
+$gray-1: #333333;
+$gray-2: #4E5150;
+$gray-3: #828282;
+$gray-4: #A9A9A9;
+$gray-5: #BDBDBD;
+$gray-6: #E0E0E0;
+$primary: #F2994A;
+$box-bg: #F2F2F2;
+$bg: #fff;
+$invalid: #dd4040;
+$valid: #5ABB23;
+
+/* MIXINS */
+
+@mixin desktop {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.fd-rr {
+    flex-direction: row-reverse;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.as-fe {
+    align-self: flex-end;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+}
+
+.g-col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.c-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.g-row-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.r-span-2 {
+    grid-row: span 2 / span 2;
+}
+
+/* ICON BUTTONS */
+
+.icon-btn {
+    user-select: none;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.25rem;
+    color: $gray-3;
+    background-color: $gray-6;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
