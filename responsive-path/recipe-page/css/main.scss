@@ -1,0 +1,317 @@
+@import "reset", "layout";
+
+/* BODY */
+
+body {
+    background-color: $bg;
+    padding: .9375rem .6875rem 0 .6875rem;
+    @include desktop {
+        background-color: $white;
+        padding-top: 3.25rem;
+
+        header, main, footer {
+            max-width: 969px;
+            margin: 0 auto;
+        }
+    }
+
+    .title {
+        font-family: "Playfair Display", sans-serif;
+        font-weight: 700;
+    }
+}
+
+/* | HEADER */
+
+header {
+    .title {
+        font-size: 1.5em;
+        @include desktop {
+            font-size: 3rem;
+        }
+    }
+
+    .recipe-description {
+        position: relative;
+        margin: .75em 0 1.8em 0;
+        padding-left: 1.5625rem;
+        font-size: .75em;
+        font-style: italic;
+        font-weight: 500;
+        @include desktop {
+            font-size: 0.875rem;
+            max-width: 610px;
+            margin-bottom: 2.5rem;
+        }
+
+        &::before {
+            content: url(../img/6dots.svg);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+/* | MAIN */
+
+main {
+    padding-bottom: 8.1875rem;
+
+    /* IMAGE */
+
+    .result-photo img {
+        width: 100%;
+        border-radius: 12px;
+        @include desktop {
+            margin-bottom: 3rem;
+        }
+    }
+
+    /* RECIPE INFOS */
+
+    .recipe-infos-box {
+        margin: 1.5rem 0 1.2031rem 0;
+        max-width: 90%;
+        @include desktop {
+            float: right;
+            width: 216px;
+            // height: 367px;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            margin: 0;
+            padding: 3.5625rem 2.6875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .info-category.flex {
+                display: block;
+            }
+        }
+
+        .recipe-info {
+            display: grid;
+            grid-template-columns: auto 2fr;
+            align-items: center;
+            @include desktop {
+                &:not(:last-child) {
+                    margin-bottom: 2.625rem;
+                }
+            }
+            
+            .info-icon {
+                grid-row: 1 / 3;
+                font-size: 1.1rem;
+                color: $gray-2;
+                margin-right: .3125em;
+                @include desktop {
+                    font-size: 2rem;
+                }
+            }
+
+            .info-name {
+                color: $gray-5;
+                text-transform: uppercase;
+                font-size: .5rem;
+                font-weight: bold;
+                @include desktop {
+                    font-size: .625rem;
+                }
+            }
+
+            .info-value {
+                font-size: .625rem;
+                font-weight: 500;
+                color: $gray-1;
+                @include desktop {
+                    font-size: .875rem;
+                }
+            }
+        }
+
+        .info-category:first-child .recipe-info {
+            margin-bottom: 1.2969rem;
+            @include desktop {
+                margin-bottom: 2.625rem;
+            }
+
+            .info-icon, .info-value {
+                color: $primary;
+            }
+        }
+    }
+
+    .box {
+        @include desktop {
+            max-width: 580px;
+        }
+
+        .title {
+            color: $gray-1;
+        }
+    }
+
+    /* INGREDIENTS SECTION */
+
+    .ingredients-box {
+        margin-bottom: 1.5em;
+        @include desktop {
+            font-size: 1.145rem;
+        }
+
+        .title {
+            font-size: 1.125rem;
+            @include desktop {
+                font-size: 1.5rem;
+            }
+        }
+
+        .element-box {
+            &:first-of-type {
+                margin-bottom: 1.8125rem;
+            }
+    
+            .title {
+                font-size: 1em;
+                font-style: italic;
+                font-weight: 400;
+                margin: .8125rem 0 1.5rem 0;
+                @include desktop {
+                    margin: 2.1875rem 0 1.87rem 0;
+                }
+            }
+
+            .list .list-item {
+                position: relative;
+                margin-bottom: .75rem;
+        
+                .checkbox-box {
+                    display: block;
+                    width: fit-content;
+                    font-size: .875em;
+                    line-height: 1.5625rem;
+                    color: $gray-1;
+                    padding-left: 1.9em;
+                    @include desktop {
+                        padding-left: 2.15rem;
+                        cursor: pointer;
+                        
+                        &:hover .custom-checkbox {
+                            background-color: rgba($primary, .12);
+                        }
+                    }
+
+                    em {
+                        font-weight: 500;
+                    }
+        
+                    input[type="checkbox"] {
+                        display: none;
+        
+                        &:checked + .custom-checkbox {
+                            border-color: $primary;
+                            background-color: rgba($primary, .12);
+        
+                            .check {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+                    }
+        
+                    .custom-checkbox {
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                        width: 21px;
+                        height: 21px;
+                        border: 1px solid $gray-3;
+                        border-radius: 4px;
+                        fill: transparent;
+                        transition: border-color .2s linear, background-color .1s;
+                        
+                        .check {
+                            stroke: $primary;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                            stroke-dasharray: 21;
+                            stroke-dashoffset: 21;
+                            transition: stroke-dashoffset .2s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* INSTRUCTIONS SECTION */
+
+    .instructions-box {
+        .title {
+            font-size: 1.5em;
+            margin-bottom: 2rem;
+        }
+
+        .list {
+            counter-reset: item;
+        }
+        
+        .list-item {
+            position: relative;
+            padding-left: 3.125rem;
+            margin-bottom: 1.9375rem;
+            line-height: 1.5rem;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $primary;
+                content: counter(item) "";
+                counter-increment: item;
+                font-family: "Playfair Display", sans-serif;
+                font-weight: 700;
+                color: $white;
+                border-radius: 6px;
+                width: 36px;
+                height: 36px;
+                line-height: 29px;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    /* SOURCE */
+
+    .source {
+        font-size: .75rem;
+        color: $gray-5;
+        @include desktop {
+            font-size: 1rem;
+            display: block;
+            margin-top: 3.4375rem;
+        }
+
+        a {
+            display: block;
+            @include desktop {
+                display: inline;
+            }
+        }
+    }
+}
+
+/* | FOOTER */
+
+footer {
+    margin: 1.3125rem auto !important;
+    text-align: center;
+
+    .dev-challenges-profile {
+        color: $gray-4;
+        font-size: .875rem;
+        font-weight: 600;
+    }
+}

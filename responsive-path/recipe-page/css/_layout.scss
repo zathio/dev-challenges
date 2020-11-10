@@ -1,0 +1,34 @@
+/* COLORS */
+
+$bg: #FAFAFA;
+$primary: #F2994A;
+$white: #fff;
+$gray-1: #333;
+$gray-2: #4F4F4F;
+$gray-3: #828282;
+$gray-4: #A9A9A9;
+$gray-5: #BDBDBD;
+
+/* MIXINS */
+
+@mixin desktop {
+    @media screen and (min-width: 850px) {
+        @content;
+    }
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+/* FONTS */
+
+.link:hover {
+    text-decoration: underline;
+}

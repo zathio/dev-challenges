@@ -9,7 +9,7 @@ You can find below my solutions :
 
 ## Responsive Web Developer Path :
 
-Basics responsive **HTML/CSS** websites and pages
+Basics responsive **HTML/CSS/JS** websites and pages
 
 - Challenge 1 : [**"404 Not Found"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/404-not-found)
 
@@ -20,6 +20,8 @@ Basics responsive **HTML/CSS** websites and pages
 - Challenge 4 : [**"My Gallery"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/my-gallery)
 
 - Challenge 5 : [**"Checkout Page"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/checkout-page)
+
+- Challenge 6 : [**"Recipe Page"**](https://github.com/zathio/dev-challenges/tree/master/responsive-path/recipe-page)
 
 ## Front-end Developer Path :
 
