@@ -37,6 +37,7 @@
 
 - View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/my-gallery/)
 - 4th Dev Challenges project
+- Mobile first
 
 ### Built With
 

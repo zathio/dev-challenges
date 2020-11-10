@@ -37,6 +37,7 @@
 
 - View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/checkout-page/)
 - 5th Dev Challenges project
+- Mobile first
 - Did some javascript for more interactivity (basic form validation with icons and custom messages and items quantity buttons), it is **not required** for this challenge
 
 ### Built With

@@ -37,6 +37,7 @@
 
 - View the [live demo](https://zathio.github.io/dev-challenges/responsive-path/interior-consultant/)
 - 3rd Dev Challenges project
+- Mobile first
 
 ### Built With
 
